@@ -1,12 +1,25 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-color: #10091d;
+  --text-color: #ffffff;
+  --accent-color: #ff0070;
+  --decor-color-bg: #ff8dcb;
+  --decor-color-text: #10091d;
+  --border-color-hover: rgb(255 255 255 / 0.5);
+  --bg-image: url("../images/cover-image-dark.png");
+}
+
+/* REC показываем и в auto-тёмной, и в принудительной тёмной */
+.header__rec {
+  display: none;
+}
+
+:root.theme-dark .header__rec,
+:root:not(.theme-light):not(.theme-dark) .header__rec {
+  display: flex;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.theme-light):not(.theme-dark) .header__rec {
+    display: flex;
+  }
 }
