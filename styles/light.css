@@ -21,7 +21,6 @@
   }
 }
 
-/* Кнопка в шапке — светлая тема выглядит иначе (по ТЗ) */
 :root.theme-light .header__theme-menu-button_type_dark {
   border-color: transparent;
 }

@@ -1,14 +1,16 @@
 :root.theme-dark {
-  --bg-color: #10091d;
+  --nav-accent-color: #FF0070;
+  --bg-color: #000028;
   --text-color: #ffffff;
-  --accent-color: #ff0070;
-  --decor-color-bg: #ff8dcb;
+  --accent-color: #FF0070;
+  --accent-text-color: #DB00FF;
+  --decor-color-bg: #FF0070;
+  --decor-line-color: #FF0070;
   --decor-color-text: #10091d;
   --border-color-hover: rgb(255 255 255 / 0.5);
   --bg-image: url("../images/cover-image-dark.png");
 }
 
-/* REC показываем и в auto-тёмной, и в принудительной тёмной */
 .header__rec {
   display: none;
 }
