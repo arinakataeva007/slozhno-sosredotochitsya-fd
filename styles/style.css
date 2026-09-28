@@ -3,8 +3,12 @@
   flex-direction: column;
   gap: 60px;
   min-height: 100vh;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: var(--bg-color);
-
+  background-attachment: fixed;
   color: var(--text-color);
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-regular);
@@ -35,24 +39,21 @@
   border-block-end: 1px solid var(--decor-line-color);
   border-inline-start: 1px solid var(--decor-line-color);
 }
-
 .header {
   display: grid;
-  gap: 114px;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 100dvh;
   padding: 20px;
-  background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
 }
-
 .header__theme-menu-list {
   display: flex;
   justify-content: center;
   gap: 8px;
 }
 
+.header__theme-menu {
+  align-self: start;
+}
 .header__rec {
   position: absolute;
   inset-block-start: 20px;
@@ -63,6 +64,7 @@
   font-style: normal;
   font-weight: 400;
   inset-inline-end: 25px;
+  text-transform: uppercase;
 }
 
 .header__rec::after {
@@ -72,26 +74,21 @@
   border-radius: 50%;
   background-color: var(--accent-color);
   fill: var(--accent-color);
-  filter: drop-shadow(0 0 4px var(--accent-color));
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
-
 .header__title {
-  align-self: center;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  text-align: left;
   color: var(--accent-text-color);
-  margin-bottom: 114px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
-
 .header__text {
+  align-self: end;
   justify-self: end;
   font-size: 18px;
   font-weight: 700;
 }
-
 .title-decor {
   background-color: var(--decor-color-bg);
   color: var(--decor-color-text);
@@ -120,6 +117,10 @@
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
 .content__cards_tips {
@@ -155,6 +156,7 @@
   display: block;
   font-weight: var(--font-weight-bold);
   justify-self: start;
+  height: 23px;
   width: 100%;
 }
 
@@ -196,11 +198,6 @@
   grid-auto-rows: 210px;
   gap: 20px;
 }
-
-.gallery__item {
-  overflow: hidden;
-}
-
 .gallery__image {
   inline-size: 100%;
   block-size: 100%;
@@ -243,7 +240,8 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: var(--accent-color);
+  color: var(--accent-text-color);
+  text-shadow: 2px 2px 0 var(--accent-color-footer);
 }
 
 @media (375px <= width < 768px) {
@@ -255,7 +253,7 @@
 
 @media (768px <= width < 1024px) {
   .header {
-    height: 1024px;
+    height: 100vh;
   }
   .header__theme-menu-list {
     display: flex;
@@ -266,17 +264,16 @@
   }
   .header__text {
     inline-size: 364px;
-    block-size: 117px;
   }
 
   .content__section {
     display: flex;
   }
 
-  .content__section > :nth-child(2) {
+  .content__section-body {
     grid-column: 2;
   }
-  .content__section_columns-3 {
+  .content__section_middle {
     display: flex;
     flex-direction: column;
   }
@@ -293,7 +290,6 @@
 @media (width >= 1024px) {
   .header__text {
     inline-size: 491px;
-    block-size: 71px;
   }
 
   .content__section {
@@ -302,44 +298,14 @@
     align-items: start;
   }
 
-  .content__section_columns-3 {
+  .content__section_middle {
     display: flex;
     flex-direction: column;
-  }
-  .content__section_columns-3 > .content__cards {
-    display: flex;
   }
 
   .content__section > :nth-child(2) {
     grid-column: 2;
   }
-  .content__cards_columns-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root.theme-auto .header__rec {
-    display: flex;
-  }
-  :root:not(.theme-light):not(.theme-dark):not(.theme-auto) .header__rec {
-    display: flex;
-  }
-  :root.theme-auto .content__title {
-    color: var(--accent-color);
-  }
-}
-
-.header__rec {
-  display: none;
-}
-
-:root.theme-dark .header__rec {
-  display: flex;
-}
-
-:root.theme-auto .header__rec {
-  display: none;
 }
 
 .header__theme-menu-button {

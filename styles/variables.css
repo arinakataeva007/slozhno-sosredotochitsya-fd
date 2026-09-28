@@ -1,15 +1,15 @@
 :root {
-  --nav-accent-color: #353430;
-  --bg-color: #353430;
+  --nav-accent-color: #FF0070;
+  --bg-color: #000028;
   --text-color: #ffffff;
-  --accent-color: #FF8DCB;
-  --decor-color-bg: #FFF1F7;
-  --decor-line-color: #353430;
-  --decor-color-text: #353430;
-  --border-color-hover: rgb(255 255 255 / 0.5);
+  --accent-color: #FF0070;
+  --accent-text-color: #DB00FF;
+  --decor-color-bg: #FF0070;
+  --decor-line-color: #FF0070;
+  --decor-color-text: #10091d;
+  --border-color-hover: rgba(255 0 112 / 0.40);
 
   --bg-image: url("../images/cover-image-dark.png");
-  --record-image: url("../images/cover-image-dark.png");
 
   --font-family-base: "IBM Plex mono", monospace;
   --font-weight-regular: normal;
