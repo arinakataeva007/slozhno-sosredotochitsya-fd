@@ -222,6 +222,13 @@
   gap: 20px;
 }
 
+.gallery__title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
 .gallery__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -375,7 +382,6 @@
   .content__section > :nth-child(2) {
     grid-column: 2;
   }
-  
 
   .content__section {
     display: grid;
