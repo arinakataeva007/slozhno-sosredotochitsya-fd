@@ -1,13 +1,14 @@
 :root {
   --nav-accent-color: #FF0070;
   --bg-color: #000028;
-  --text-color: #ffffff;
   --accent-color: #FF0070;
   --accent-text-color: #DB00FF;
+  --accent-title-color: #FF0070;
   --decor-color-bg: #FF0070;
   --decor-line-color: #FF0070;
-  --decor-color-text: #10091d;
   --border-color-hover: rgba(255 0 112 / 0.40);
+  --parag-text-color: #F1B2CE;
+  --text-color:#000028;
 
   --bg-image: url("../images/cover-image-dark.png");
 

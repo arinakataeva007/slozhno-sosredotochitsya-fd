@@ -85,6 +85,7 @@
 }
 
 .header__rec {
+  display: flex;
   position: absolute;
   inset-block-start: 20px;
   align-items: center;
@@ -121,11 +122,12 @@
   justify-self: end;
   font-size: 18px;
   font-weight: 700;
+  color: var(--text-color);
 }
 
 .title-decor {
   background-color: var(--decor-color-bg);
-  color: var(--decor-color-text);
+  color: var(--text-color);;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -162,6 +164,7 @@
   font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
   justify-self: start;
+  color: var(--accent-title-color);
 }
 
 .content__subtitle {
@@ -189,6 +192,7 @@
   line-height: 23.4px;
   width: 100%;
   height: fit-content;
+  color: var(--text-color);
 }
 
 .card__text {
@@ -196,6 +200,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
+  color: var(--parag-text-color);
 }
 
 .card__text:not(:last-child) {
@@ -361,12 +366,12 @@
     grid-column: 2;
   }
 
-  .content__section_middle {
+  .content__section_factors {
     display: flex;
     flex-direction: column;
   }
 
-  .content__section_middle > .content__cards {
+  .content__section_factors > .content__cards {
     display: flex;
     flex-direction: column;
   }
@@ -391,7 +396,7 @@
     inline-size: clamp(364px, 50vw, 491px);
   }
 
-  .content__section_middle {
+  .content__section_factors {
     display: flex;
     flex-direction: column;
   }
@@ -400,7 +405,7 @@
     grid-column: 2;
   }
 
-  .content__section_middle .content__cards {
+  .content__section_factors .content__cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
@@ -412,7 +417,7 @@
     align-items: start;
   }
 
-  .content__section_middle {
+  .content__section_factors {
     display: flex;
     flex-direction: column;
   }
@@ -428,14 +433,14 @@
     align-items: start;
   }
 
-  .content__section_middle .content__title {
+  .content__section_factors .content__title {
     grid-column: 1;
     grid-row: 1;
     max-inline-size: 100%;
     overflow-wrap: break-word;
   }
 
-  .content__section_middle .content__cards {
+  .content__section_factors .content__cards {
     grid-column: 1 / -1;
     grid-row: 2;
     display: grid;
