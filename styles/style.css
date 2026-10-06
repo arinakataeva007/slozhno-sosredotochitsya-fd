@@ -385,6 +385,10 @@
     flex-direction: column;
   }
 
+  .content__section_factors .content__title {
+    max-inline-size: 20ch;
+  }
+
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
