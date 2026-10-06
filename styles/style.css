@@ -128,7 +128,7 @@
 
 .title-decor {
   background-color: var(--decor-color-bg);
-  color: var(--text-color);;
+  color: var(--text-color);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -178,7 +178,7 @@
   display: block;
   inline-size: 100%;
 }
-.card_tip > .card__title{
+.card_tip > .card__title {
   font-weight: var(--font-weight-regular);
 }
 
@@ -239,13 +239,14 @@
   font-weight: 700;
   line-height: 1.3;
 }
-
+/*  */
 .gallery__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 210px;
   gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
 }
+
 .gallery__image {
   inline-size: 100%;
   block-size: 100%;
@@ -256,8 +257,8 @@
 .gallery__item:nth-child(1) {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+  aspect-ratio: 5 / 2;
 }
-
 .gallery__item:nth-child(2) {
   grid-column: 3 / 4;
   grid-row: 1 / 3;
@@ -271,11 +272,13 @@
 .gallery__item:nth-child(4) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  aspect-ratio: 1 / 1;
 }
 
 .gallery__item:nth-child(5) {
   grid-column: 2 / 4;
   grid-row: 3 / 4;
+  aspect-ratio: 3 / 2;
 }
 
 .footer {
@@ -385,33 +388,6 @@
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-
-  .gallery__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery__list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;          /* вместо 210px */
-  }
-
-  .gallery__item:nth-child(1) {    /* закат */
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    aspect-ratio: 5 / 2;
-  }
-
-  .gallery__item:nth-child(4) {    /* книги */
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    aspect-ratio: 1 / 1;
-  }
-
-  .gallery__item:nth-child(5) {    /* улица */
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    aspect-ratio: 3 / 2;
-  }
 }
 
 @media (width >= 1024px) {
@@ -475,28 +451,5 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-  }
-
-  .gallery__list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-  }
-
-  .gallery__item:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    aspect-ratio: 5 / 2;
-  }
-
-  .gallery__item:nth-child(4) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    aspect-ratio: 1 / 1;
-  }
-
-  .gallery__item:nth-child(5) {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    aspect-ratio: 3 / 2;
   }
 }
