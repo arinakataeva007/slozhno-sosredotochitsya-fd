@@ -178,6 +178,9 @@
   display: block;
   inline-size: 100%;
 }
+.card_tip > .card__title{
+  font-weight: var(--font-weight-regular);
+}
 
 .card {
   display: grid;
@@ -386,6 +389,29 @@
   .gallery__list {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .gallery__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;          /* вместо 210px */
+  }
+
+  .gallery__item:nth-child(1) {    /* закат */
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    aspect-ratio: 5 / 2;
+  }
+
+  .gallery__item:nth-child(4) {    /* книги */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery__item:nth-child(5) {    /* улица */
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    aspect-ratio: 3 / 2;
+  }
 }
 
 @media (width >= 1024px) {
@@ -449,5 +475,28 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+  }
+
+  .gallery__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  .gallery__item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    aspect-ratio: 5 / 2;
+  }
+
+  .gallery__item:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery__item:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    aspect-ratio: 3 / 2;
   }
 }
