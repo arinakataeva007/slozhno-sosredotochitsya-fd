@@ -239,7 +239,7 @@
   font-weight: 700;
   line-height: 1.3;
 }
-/*  */
+
 .gallery__list {
   display: grid;
   gap: 20px;
@@ -306,11 +306,11 @@
     gap: 50px;
   }
   .decorated-zone::before {
-    inset-block-start: 20px;
+    inset-block-start: 10px;
     inset-inline-end: 10px;
   }
   .decorated-zone::after {
-    inset-block-end: 20px;
+    inset-block-end: 10px;
     inset-inline-start: 10px;
   }
 
@@ -341,9 +341,14 @@
     align-self: center;
   }
 
+  .gallery {
+    gap: 10px;
+  }
+
   .gallery__list {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 }
 
