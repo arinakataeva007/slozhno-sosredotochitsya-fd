@@ -171,6 +171,7 @@
 .content__subtitle {
   display: block;
   inline-size: 100%;
+  font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
 }
 
@@ -299,9 +300,16 @@
   .page {
     gap: 40px;
   }
+  
   .header {
     padding: 10px;
   }
+
+  .header__rec {
+    inset-block-start: 10px;
+    inset-inline-end: 20px;
+  }
+
   .content {
     gap: 50px;
   }
