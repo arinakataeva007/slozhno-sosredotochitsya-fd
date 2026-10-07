@@ -16,13 +16,13 @@
 @media (prefers-color-scheme: light) {
   :root.theme-auto {
     --nav-accent-color: #353430;
-    --bg-color: #fdeaf5;
+    --bg-color: #FFF1F7;
     --accent-text-color: #ffc2e6;
     --accent-color: #ff8dcb;
     --accent-title-color: #353430;
     --accent-color-footer: #ff0070;
     --decor-color-bg: #ff8dcb;
-    --border-color-hover: rgb(16 9 29 / 0.5);
+    --border-color-hover: rgba(50 49 45 / 0.4);
     --text-color: #353430;
     --parag-text-color: #353430;
     --bg-image: url("../images/cover-image-light.png");
